@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .p {
+            color: #f9f7f399;
+        }
+    </style>
+
+</head>
+
+<body class="relative">
+
+    <header class="fixed w-[100%] bg-[#ffffff80] backdrop-blur-xl">
+
+        <!-- nav bar -->
+        <section class="flex justify-around items-center py-5 bg-[#f9f7f399]">
+
+            <a role="button" class="btn bg-lime-400 px-8 text-xl">Blog</a>
+            <div class="inline-flex items-center gap-3">
+                <img class="h-10" src="./assets/logo.png" alt="">
+                <h1 class="text-xl font-bold hidden md:block">Donate Bangladesh</h1>
+            </div>
+
+            <div class="inline-flex items-center gap-3">
+                <img src="./assets/coin.png" alt="">
+                <p class="text-xl font-bold text-gray-600"><span>5500</span> BDT</p>
+            </div>
+
+        </section>
+
+        <!-- center buttons -->
+        <div class="flex justify-center gap-4 pt-9 pb-4">
+            <button class="btn border-lime-400 bg-lime-400 px-8 text-xl font-bold">Donation</button>
+            <button class="btn bg-transparent border-gray-400 px-8 text-xl">History</button>
+        </div>
+        <hr class="border-gray-100">
+
+    </header>
+    <div class="pt-48"></div>
+</body>
+
+</html>
