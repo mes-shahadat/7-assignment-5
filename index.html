@@ -32,13 +32,13 @@
         <!-- nav bar -->
         <section class="flex justify-around items-center py-5 bg-[#f9f7f399]">
 
-            <a class="btn bg-lime-400 px-8 text-xl" href="./blog.html" role="button">Blog</a>
+            <a class="btn border-lime-400 bg-lime-400 px-8 text-xl" href="./blog.html" role="button">Blog</a>
             <div class="inline-flex items-center gap-3">
                 <img class="h-10" src="./assets/logo.png" alt="">
                 <h1 class="text-xl font-bold hidden md:block">Donate Bangladesh</h1>
             </div>
 
-            <div class="inline-flex items-center gap-3">
+            <div class="balance inline-flex items-center gap-3">
                 <img src="./assets/coin.png" alt="">
                 <p class="text-xl font-bold text-gray-600"><span>5500</span> BDT</p>
             </div>
@@ -47,8 +47,8 @@
 
         <!-- center buttons -->
         <div class="flex justify-center gap-4 pt-9 pb-4">
-            <button class="btn border-lime-400 bg-lime-400 px-8 text-xl font-bold">Donation</button>
-            <button class="btn bg-transparent border-gray-400 px-8 text-xl">History</button>
+            <button class="donation-btn btn border-lime-400 bg-lime-400  px-8 text-xl">Donation</button>
+            <button class="history-btn btn bg-transparent border-gray-400 px-8 text-xl">History</button>
         </div>
         
     </header>
@@ -60,7 +60,7 @@
     <main>
 
         <!-- donate section -->
-        <section class="my-5 space-y-6">
+        <section class="donate-section my-5 space-y-6">
 
             <!-- dialog box -->
             <dialog class="fixed top-0 w-full h-full bg-[#80808080] justify-center items-center z-10">
@@ -70,7 +70,7 @@
                     <img class="w-10" src="./assets/coin.png" alt="">
                     <p>You Have Donated for Humankind</p>
                     <p class="text-lg font-bold">Successfully</p>
-                    <button class="btn"">close confirmation</button>
+                    <button class="btn"" onclick="closeDialog()">close confirmation</button>
                 </div>
     
             </dialog>
@@ -85,7 +85,7 @@
     
                     <button class="btn no-animation w-max">
                         <img src="./assets/coin.png" alt="">
-                        <p class="text-xl font-bold text-gray-500"><span>0</span> BDT</p>
+                        <p class="donation text-xl font-bold text-gray-500"><span>0</span> BDT</p>
                     </button>
     
                     <h2 class="text-lg font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
@@ -94,7 +94,7 @@
                         or small, makes difference. Please join us in supporting the relief efforts and making a positive
                         impact on the lives of those in need.</p>
                     <input type="text" placeholder="Write Donation Amount" class="input input-bordered" />
-                    <button class="btn bg-lime-400 font-bold text-lg">Donate Now</button>
+                    <button class="btn bg-lime-400 font-bold text-lg" onclick="donate(this)">Donate Now</button>
                 </div>
 
             </div>
@@ -109,17 +109,17 @@
     
                     <button class="btn no-animation w-max">
                         <img src="./assets/coin.png" alt="">
-                        <p class="text-xl font-bold text-gray-500"><span>600</span> BDT</p>
+                        <p class="donation text-xl font-bold text-gray-500"><span>600</span> BDT</p>
                     </button>
     
-                    <h2 class="text-lg font-bold">Donate for Flood Relief in Feni,Bangladesh</h2>
+                    <h2 class="text-lg font-bold">Donate for Flood Relief in Feni, Bangladesh</h2>
                     <p>The recent floods in Feni have devastated local communities, leading to severe disruption and loss.
                         Your generous donation will help provide immediate aid, including food, clean water, and medical
                         supplies, to those affected by this calamity. Together, we can offer crucial support and help
                         rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real
                         difference. Please consider donating today to assist those in urgent need.</p>
                     <input type="text" placeholder="Write Donation Amount" class="input input-bordered" />
-                    <button class="btn bg-lime-400 font-bold text-lg">Donate Now</button>
+                    <button class="btn bg-lime-400 font-bold text-lg" onclick="donate(this)">Donate Now</button>
 
                 </div>
     
@@ -135,7 +135,7 @@
     
                     <button class="btn no-animation w-max">
                         <img src="./assets/coin.png" alt="">
-                        <p class="text-xl font-bold text-gray-500"><span>2400</span> BDT</p>
+                        <p class="donation text-xl font-bold text-gray-500"><span>2400</span> BDT</p>
                     </button>
     
                     <h2 class="text-lg font-bold">Aid for Injured in the Quota Movement</h2>
@@ -146,7 +146,7 @@
                         alleviating their suffering and aiding in their recovery. Please consider making a donation to
                         support these brave individuals in their time of need.</p>
                     <input type="text" placeholder="Write Donation Amount" class="input input-bordered" />
-                    <button class="btn bg-lime-400 font-bold text-lg">Donate Now</button>
+                    <button class="btn bg-lime-400 font-bold text-lg" onclick="donate(this)">Donate Now</button>
 
                 </div>
     
@@ -155,14 +155,7 @@
         </section>
 
         <!-- history section -->
-        <section class="my-6 space-y-5 hidden">
-
-            <div class="w-11/12 md:w-9/12 mx-auto p-6 border-2 border-gray-100 rounded-2xl space-y-4">
-
-                <p class="text-lg font-bold">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</p>
-                <p>Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
-
-            </div
+        <section class="history-section my-6 space-y-5 hidden">
 
         </section>
 
@@ -171,5 +164,7 @@
     <footer class="bg-[#f9f7f3] h-32 mt-10"></footer>
 
 </body>
+
+<script src="./js/script.js"></script>
 
 </html>
