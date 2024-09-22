@@ -17,6 +17,11 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <style>
+        i {
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,7 +54,7 @@
 
     <div class="pt-48"></div>
 
-    <main class="w-11/12 mx-auto">
+    <main class="w-11/12 lg:w-3/5 mx-auto">
 
         <div class="inline-flex gap-2 items-end mb-4">
 
@@ -67,38 +72,46 @@
 
             <div class="collapse bg-base-200">
                 <input type="radio" name="my-accordion-1" checked="checked" />
-                <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
-                <div class="collapse-content">
-                    <p>hello</p>
+                <div class="collapse-title text-xl font-bold">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content space-y-2 font-medium">
+                    <p>dom is an object represention of a html document. this object can be used by scripting language like javascript to manupulate the rendered html in the browser.</p>
+                    
+                    <p>using dom, we can <i>add & remove elements</i>, <i>manipulate elements attribute</i>, <i>add events</i> or <i>add transition</i> etc.</p>
                 </div>
             </div>
             
             <div class="collapse bg-base-200">
                 <input type="radio" name="my-accordion-1" />
-                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
-                <div class="collapse-content">
-                    <p>hello</p>
+                <div class="collapse-title text-xl font-bold">How do you select an element from the DOM?</div>
+                <div class="collapse-content space-y-2 font-medium">
+                    <p>dom provides us an object called <strong>document</strong>, which has many properties and methods for accessing and manipulating html elements. </p>
+
+                    <p>we can use methods like <strong>document.getElementById()</strong> or <strong>document.querySelector()</strong> to select single element and <strong>document.querySelectorAll()</strong> & other methods to select multiple elements</p>
                 </div>
             </div>
             
             <div class="collapse bg-base-200">
                 <input type="radio" name="my-accordion-1" />
-                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
-                <div class="collapse-content">
-                    <p>hello</p>
+                <div class="collapse-title text-xl font-bold">What is event delegation in the context of the DOM, and why is it useful?</div>
+                <div class="collapse-content space-y-2 font-medium">
+                    <p>event delegation is an optimization technique for event handling in certain situations. </p>
+
+                    <p>sometimes instead of adding event handlers in each elements, it's better to handle those event in there parent element using a single event. <strong>doing this improves the maintainabilty and effeciency of our code</strong></p>
                 </div>
             </div>
 
             <div class="collapse bg-base-200">
                 <input type="radio" name="my-accordion-1" />
-                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
-                <div class="collapse-content">
-                    <p>hello</p>
+                <div class="collapse-title text-xl font-bold">How do you manipulate an element's attributes and styles using the DOM?</div>
+                <div class="collapse-content space-y-2 font-medium">
+                    <p>after accessing an element, we can use <strong>getAttribute()</strong> or <strong>setAttribute()</strong> method to manipulates that elements attributes. </p>
+
+                    <p>we can also use <strong>element.style</strong> property to style that element. we also have <strong>classlist.add()</strong> or <strong>classlist.remove()</strong> method that allows us to add or remove utility classes to style any elements</p>
                 </div>
             </div>
 
         </section>
-        
+
     </main>
 
     <footer class="bg-[#f9f7f3] h-32 mt-10"></footer>
