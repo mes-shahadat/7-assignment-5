@@ -28,6 +28,7 @@ function activeState(event) {
 // nested navigation event
 const donateSec = document.querySelector(".donate-section");
 const historySec = document.querySelector(".history-section");
+const footer = document.body.querySelector("footer");
 
 donationBtn.addEventListener("click", showDonate);
 historyBtn.addEventListener("click", showHistory);
@@ -36,14 +37,14 @@ function showDonate() {
 
     donateSec.classList.remove('hidden');
     historySec.classList.add('hidden');
-
+    footer.classList.remove('hidden');
 }
 
 function showHistory() {
-
+    
     historySec.classList.remove('hidden');
     donateSec.classList.add('hidden');
-
+    footer.classList.add('hidden');
 }
 
 // modal function
